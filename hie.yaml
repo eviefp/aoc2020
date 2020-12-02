@@ -1,0 +1,13 @@
+cradle:
+  cabal:
+    - path: "src"
+      component: "lib:aoc"
+
+    - path: "app/Main.hs"
+      component: "aoc:exe:aoc"
+
+    - path: "app/Paths_aoc.hs"
+      component: "aoc:exe:aoc"
+
+    - path: "test"
+      component: "aoc:test:aoc-test"
