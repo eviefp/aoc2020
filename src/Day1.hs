@@ -24,12 +24,12 @@ printSolution = print . findSolution2
 findSolution :: Input -> Int
 findSolution xs =
     case [ x * y
-      | (x:rest) <- tails xs
-      , y <- rest
-      , x + y == 2020
-    ] of
-       (x:_) -> x
-       []    -> error "No solution found."
+         | (x:rest) <- tails xs
+         , y <- rest
+         , x + y == 2020
+         ] of
+           (x:_) -> x
+           []    -> error "No solution found."
 
 findSolution2 :: Input -> Int
 findSolution2 xs =

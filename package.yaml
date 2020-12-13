@@ -20,7 +20,10 @@ description:         Please see the README on GitHub at <https://github.com/vlad
 
 dependencies:
 - base >= 4.7 && < 5
+- containers
 - megaparsec
+- transformers
+- mtl
 
 default-extensions:
   - BangPatterns
@@ -67,6 +70,8 @@ ghc-options:
   - -Wno-safe # Don't use Safe Haskell warnings
   - -Wno-missing-local-signatures # Warning for polymorphic local bindings; nothing wrong with those.
   - -Wno-monomorphism-restriction # Don't warn if the monomorphism restriction is used
+  - -Wno-missing-safe-haskell-mode
+  - -Wno-prepositive-qualified-module
 
 library:
   source-dirs: src

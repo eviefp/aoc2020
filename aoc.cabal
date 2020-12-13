@@ -25,15 +25,25 @@ library
   exposed-modules:
       Day1
       Day2
+      Day3
+      Day4
+      Day42
+      Day5
+      Day6
+      Day7
+      Day8
   other-modules:
       Paths_aoc
   hs-source-dirs:
       src
   default-extensions: BangPatterns ConstraintKinds DataKinds DeriveAnyClass DeriveDataTypeable DeriveGeneric DerivingStrategies EmptyDataDecls FlexibleContexts FlexibleInstances GADTs GeneralizedNewtypeDeriving InstanceSigs LambdaCase MultiParamTypeClasses NoImplicitPrelude NoMonomorphismRestriction OverloadedStrings QuasiQuotes RankNTypes RecordWildCards ScopedTypeVariables TemplateHaskell TupleSections TypeFamilies TypeOperators ViewPatterns
-  ghc-options: -Weverything -Wno-missing-home-modules -Wno-redundant-constraints -Wno-missed-specialisations -Wno-all-missed-specialisations -Wno-missing-export-lists -Wno-missing-local-signatures -Wno-missing-exported-signatures -Wno-missing-import-lists -Wno-unsafe -Wno-safe -Wno-missing-local-signatures -Wno-monomorphism-restriction
+  ghc-options: -Weverything -Wno-missing-home-modules -Wno-redundant-constraints -Wno-missed-specialisations -Wno-all-missed-specialisations -Wno-missing-export-lists -Wno-missing-local-signatures -Wno-missing-exported-signatures -Wno-missing-import-lists -Wno-unsafe -Wno-safe -Wno-missing-local-signatures -Wno-monomorphism-restriction -Wno-missing-safe-haskell-mode -Wno-prepositive-qualified-module
   build-depends:
       base >=4.7 && <5
+    , containers
     , megaparsec
+    , mtl
+    , transformers
   default-language: Haskell2010
 
 executable aoc
@@ -43,11 +53,14 @@ executable aoc
   hs-source-dirs:
       app
   default-extensions: BangPatterns ConstraintKinds DataKinds DeriveAnyClass DeriveDataTypeable DeriveGeneric DerivingStrategies EmptyDataDecls FlexibleContexts FlexibleInstances GADTs GeneralizedNewtypeDeriving InstanceSigs LambdaCase MultiParamTypeClasses NoImplicitPrelude NoMonomorphismRestriction OverloadedStrings QuasiQuotes RankNTypes RecordWildCards ScopedTypeVariables TemplateHaskell TupleSections TypeFamilies TypeOperators ViewPatterns
-  ghc-options: -Weverything -Wno-missing-home-modules -Wno-redundant-constraints -Wno-missed-specialisations -Wno-all-missed-specialisations -Wno-missing-export-lists -Wno-missing-local-signatures -Wno-missing-exported-signatures -Wno-missing-import-lists -Wno-unsafe -Wno-safe -Wno-missing-local-signatures -Wno-monomorphism-restriction -threaded -rtsopts -with-rtsopts=-N
+  ghc-options: -Weverything -Wno-missing-home-modules -Wno-redundant-constraints -Wno-missed-specialisations -Wno-all-missed-specialisations -Wno-missing-export-lists -Wno-missing-local-signatures -Wno-missing-exported-signatures -Wno-missing-import-lists -Wno-unsafe -Wno-safe -Wno-missing-local-signatures -Wno-monomorphism-restriction -Wno-missing-safe-haskell-mode -Wno-prepositive-qualified-module -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       aoc
     , base >=4.7 && <5
+    , containers
     , megaparsec
+    , mtl
+    , transformers
   default-language: Haskell2010
 
 test-suite aoc-test
@@ -58,9 +71,12 @@ test-suite aoc-test
   hs-source-dirs:
       test
   default-extensions: BangPatterns ConstraintKinds DataKinds DeriveAnyClass DeriveDataTypeable DeriveGeneric DerivingStrategies EmptyDataDecls FlexibleContexts FlexibleInstances GADTs GeneralizedNewtypeDeriving InstanceSigs LambdaCase MultiParamTypeClasses NoImplicitPrelude NoMonomorphismRestriction OverloadedStrings QuasiQuotes RankNTypes RecordWildCards ScopedTypeVariables TemplateHaskell TupleSections TypeFamilies TypeOperators ViewPatterns
-  ghc-options: -Weverything -Wno-missing-home-modules -Wno-redundant-constraints -Wno-missed-specialisations -Wno-all-missed-specialisations -Wno-missing-export-lists -Wno-missing-local-signatures -Wno-missing-exported-signatures -Wno-missing-import-lists -Wno-unsafe -Wno-safe -Wno-missing-local-signatures -Wno-monomorphism-restriction -threaded -rtsopts -with-rtsopts=-N
+  ghc-options: -Weverything -Wno-missing-home-modules -Wno-redundant-constraints -Wno-missed-specialisations -Wno-all-missed-specialisations -Wno-missing-export-lists -Wno-missing-local-signatures -Wno-missing-exported-signatures -Wno-missing-import-lists -Wno-unsafe -Wno-safe -Wno-missing-local-signatures -Wno-monomorphism-restriction -Wno-missing-safe-haskell-mode -Wno-prepositive-qualified-module -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       aoc
     , base >=4.7 && <5
+    , containers
     , megaparsec
+    , mtl
+    , transformers
   default-language: Haskell2010
